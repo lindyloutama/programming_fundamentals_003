@@ -19,3 +19,11 @@ describe("catalogueService", () => {
     });
   });
 });
+
+  describe("catalogueService.`getBooksByAuthor", () => {
+    test("return an arrau of charles Dickens books", () => {
+      const actual = catalogueService.getBooksByAuthor("Charles Dickens");
+      const expected = ["A Tale of Two Cities", "Oliver Twist", "Great Expectations"];
+      expect(actual).toEqual(expected)
+    });
+  });
